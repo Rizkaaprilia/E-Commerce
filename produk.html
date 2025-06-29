@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk - R&B Store</title>
+    <script src="https://cdn.tailwindcss.com "></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+      .accent-bg {
+        background-color: #c7a57a;
+      }
+      .accent-hover:hover {
+        background-color: #d4a574;
+      }
+      .accent-text {
+        color: #4b3f34;
+      }
+    </style>
+  </head>
+  <body class="bg-[#F8F4E3] text-[#4B3F34]">
+    <!-- Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold font-playfair accent-text">R&B Store</a>
+        <nav class="space-x-6 hidden md:block">
+          <a href="index.html" class="font-medium hover:text-[#D4A574]">Beranda</a>
+          <a href="produk.html" class="font-medium hover:text-[#D4A574]">Produk</a>
+          <a href="kontak.html" class="font-medium hover:text-[#D4A574]">Kontak</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Produk Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-playfair font-bold text-center accent-text mb-12">Koleksi Produk Kami</h2>
+
+        <!-- Tabs Kategori -->
+        <div class="flex justify-center space-x-4 mb-10 flex-wrap">
+          <button onclick="showCategory('all')" class="px-4 py-2 rounded-full bg-[#C7A57A] text-white font-medium">Semua</button>
+          <button onclick="showCategory('hijab')" class="px-4 py-2 rounded-full bg-gray-200 text-[#4B3F34] hover:bg-[#D4A574] hover:text-white transition">Hijab</button>
+          <button onclick="showCategory('outfit')" class="px-4 py-2 rounded-full bg-gray-200 text-[#4B3F34] hover:bg-[#D4A574] hover:text-white transition">Outfit</button>
+        </div>
+
+        <!-- Produk Grid -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Hijab -->
+          <div class="product-card hijab">
+            <img src="abaya1.jpg" alt="Abaya Syar'i" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Abaya Premium</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 149.000</p>
+              <button onclick="pesanProduk('Abaya Premium', '149000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card hijab">
+            <img src="hijab2.jpg" alt="Dress Abaya" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Dress Abaya</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 99.000</p>
+              <button onclick="pesanProduk('Dress Abaya', '99000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card hijab">
+            <img src="hijab3.jpg" alt="Abaya Timur Tengah" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Abaya Timur Tengah</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 99.000</p>
+              <button onclick="pesanProduk('Abaya Timur Tengah', '99000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card hijab">
+            <img src="hijab 4.jpg" alt="Abaya Wanita Cantik" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Abaya Wanita Cantik</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 99.000</p>
+              <button onclick="pesanProduk('Abaya Wanita Cantik', '99000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card hijab">
+            <img src="hijab5.jpg" alt="Abaya Modern" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Abaya Modern</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 99.000</p>
+              <button onclick="pesanProduk('Abaya Modern', '99000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card hijab">
+            <img src="abaya dubai.jpg" alt="Abaya Dubai" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Abaya Dubai</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 99.000</p>
+              <button onclick="pesanProduk('Abaya Modern', '99000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card hijab">
+            <img src="abaya2.jpg" alt="Abaya Casual" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Abaya Casual</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 99.000</p>
+              <button onclick="pesanProduk('Abaya Modern', '99000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card hijab">
+            <img src="hijab6.jpg" alt="Abaya TilePremium" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Abaya TilePremium</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 99.000</p>
+              <button onclick="pesanProduk('Abaya Modern', '99000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+
+          <!-- Outfit Set -->
+          <div class="product-card outfit">
+            <img src="outfit1.jpg" alt="OTD Coll" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">OTD Coll</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 299.000</p>
+              <button onclick="pesanProduk('Dress Minimalis', '299000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card outfit">
+            <img src="outfit2.jpg" alt="Outfit Casual" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Outfit Casual</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 249.000</p>
+              <button onclick="pesanProduk('Setelan Casual', '249000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card outfit">
+            <img src="outfit3.jpg" alt="Outfit Premium" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Outfit Premium</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 249.000</p>
+              <button onclick="pesanProduk('Setelan Casual', '249000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card outfit">
+            <img src="outfit4.jpg" alt="Outfit Of The Day" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Outfit Of The Day</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 249.000</p>
+              <button onclick="pesanProduk('Setelan Casual', '249000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card outfit">
+            <img src="outfit5.jpg" alt="Outfit Look Awesome" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Outfit Look awesome</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 249.000</p>
+              <button onclick="pesanProduk('Setelan Casual', '249000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card outfit">
+            <img src="outfit6.jpeg" alt="Outfit Look Pretty" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Outfit Look Pretty</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 249.000</p>
+              <button onclick="pesanProduk('Setelan Casual', '249000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card outfit">
+            <img src="outfit7.jpg" alt="Outfit StarLook" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Outfit StarLook</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 249.000</p>
+              <button onclick="pesanProduk('Setelan Casual', '249000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+          <div class="product-card outfit">
+            <img src="outfit.jpg" alt="Outfit Elegan" class="w-full h-48 object-cover rounded-t-lg" />
+            <div class="p-4 bg-white border border-t-0 rounded-b-lg shadow-sm">
+              <h3 class="text-lg font-semibold accent-text">Outfit Elegan</h3>
+              <p class="accent-text opacity-80 mt-1">Rp 249.000</p>
+              <button onclick="pesanProduk('Setelan Casual', '249000')" class="mt-2 w-full accent-bg text-white py-2 px-4 rounded hover:bg-[#D4A574] transition">Pesan Sekarang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="py-12 bg-[#F8F4E3]">
+      <div class="container mx-auto px-6 max-w-xl">
+        <h3 class="text-2xl font-bold text-center accent-text mb-6">Formulir Pemesanan</h3>
+        <form id="orderForm" class="bg-white p-6 rounded-lg shadow-md">
+          <div class="mb-4">
+            <label for="nama" class="block font-medium accent-text">Nama</label>
+            <input type="text" id="nama" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4A574]" />
+          </div>
+          <div class="mb-4">
+            <label for="noWa" class="block font-medium accent-text">Nomor WhatsApp</label>
+            <input type="tel" id="noWa" required class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4A574]" />
+          </div>
+          <div class="mb-4">
+            <label for="produk" class="block font-medium accent-text">Produk</label>
+            <input type="text" id="produk" readonly class="w-full px-4 py-2 border border-gray-300 bg-gray-100 rounded" />
+          </div>
+          <div class="mb-4">
+            <label for="harga" class="block font-medium accent-text">Harga</label>
+            <input type="text" id="harga" readonly class="w-full px-4 py-2 border border-gray-300 bg-gray-100 rounded" />
+          </div>
+          <div class="mb-4">
+            <label for="jumlah" class="block font-medium accent-text">Jumlah</label>
+            <input type="number" id="jumlah" min="1" value="1" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4A574]" />
+          </div>
+          <div class="mb-4">
+            <label for="catatan" class="block font-medium accent-text">Catatan Tambahan</label>
+            <textarea id="catatan" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4A574]"></textarea>
+          </div>
+          <button type="submit" class="w-full accent-bg text-white py-2 rounded hover:bg-[#D4A574] transition">Kirim Pesanan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#4B3F34] text-white py-8 mt-10">
+      <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2025 R&B Store. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Script Filter Kategori & Pesan -->
+    <script>
+      function showCategory(category) {
+        const products = document.querySelectorAll(".product-card");
+        products.forEach((product) => {
+          if (category === "all" || product.classList.contains(category)) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      }
+
+      let selectedProduct = "";
+      let selectedPrice = "";
+
+      function pesanProduk(nama, harga) {
+        selectedProduct = nama;
+        selectedPrice = harga;
+        document.getElementById("produk").value = nama;
+        document.getElementById("harga").value = formatRupiah(harga);
+      }
+
+      function formatRupiah(angka) {
+        return "Rp " + parseInt(angka).toLocaleString();
+      }
+
+      document.getElementById("orderForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nama = document.getElementById("nama").value.trim();
+        const noWa = document.getElementById("noWa").value.trim();
+        const jumlah = document.getElementById("jumlah").value;
+        const catatan = document.getElementById("catatan").value.trim();
+
+        if (!nama || !noWa || !jumlah) {
+          alert("Silakan lengkapi semua data!");
+          return;
+        }
+
+        const total = parseInt(selectedPrice) * parseInt(jumlah);
+        const message = encodeURIComponent(`Halo, saya ingin memesan:\n\nProduk: ${selectedProduct}\nJumlah: ${jumlah}\nTotal Harga: Rp ${total.toLocaleString()}\nCatatan: ${catatan}\n\nTerima kasih!`);
+        const waUrl = ` https://wa.me/62 ${noWa.replace(/^0/, "")}?text=${message}`;
+
+        window.open(waUrl, "_blank");
+      });
+    </script>
+  </body>
+</html>
